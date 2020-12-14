@@ -103,4 +103,12 @@ public class MusicOrganizer
             System.out.println("No hay ningún archivo que contenga esa palabra)");
         }
     }
+    
+    public void playSamplesArtist(String searchString){
+        for (String filename : files) {
+            if (filename.contains(searchString)) {
+                player.playSample(filename);
+            }
+        }
+    }
 }
