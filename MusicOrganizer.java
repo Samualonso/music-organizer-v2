@@ -84,10 +84,11 @@ public class MusicOrganizer
     }
     
     public void listAllFiles(){
-        int posicion = 0;
-        for(String filename : files){
-            posicion = posicion + 1;
-            System.out.println(posicion + ". " + filename);
+        int index = 0;
+        while (index < files.size()){
+            String filename = files.get(index);
+            System.out.println(filename);
+            index++;
         }
     }
     
@@ -101,14 +102,6 @@ public class MusicOrganizer
         }
         if (artistFound == false) {
             System.out.println("No hay ningún archivo que contenga esa palabra)");
-        }
-    }
-    
-    public void deleteSongsWithText(String searchString) {
-        for (String filename : files) {
-            if (filename.contains(searchString)){
-                files.remove(filename);
-            }
         }
     }
     
