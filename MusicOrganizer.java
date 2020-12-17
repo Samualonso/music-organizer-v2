@@ -124,7 +124,9 @@ public class MusicOrganizer
             if (filename.contains(searchString)) {
                 found = true;
             }
-            index++;
+            else{
+                index++;
+            }
         }
         
         if (!found) {
